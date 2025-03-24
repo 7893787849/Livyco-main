@@ -85,7 +85,7 @@ const TenantDetails = () => {
 
       {/* Confirm Booking Button */}
       <div className="flex justify-center mt-8">
-        <button className="w-64 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md shadow-md hover:bg-blue-700 transition">
+        <button className="w-64 py-3 bg-[#0827B2] text-white text-lg font-semibold rounded-md shadow-md hover:bg-blue-700 transition">
           Confirm Booking
         </button>
       </div>

@@ -4,6 +4,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Link } from "react-router-dom"
 
 const ClientNav = () => {
+  const navLinks = [
+    { name: "Home", path: "/client/home" },
+    { name: "Listing", path: "#" },
+    { name: "Tenants", path: "/client/tenantlist" },
+    { name: "Dashboard", path: "/client/dashboard" },
+    { name: "Chat", path: "#" },
+    { name: "Contact Us", path: "#" },
+  ];
   return (
     <nav className="bg-blue-900 py-4 px-6 flex items-center justify-between">
       {/* Left Section - Logo */}
@@ -32,14 +40,17 @@ const ClientNav = () => {
 
       {/* Center - Navigation Links */}
       <ul className="hidden md:flex space-x-20 text-white font-medium">
-        <li className="cursor-pointer hover:text-yellow-400">Home</li>
-        <li className="cursor-pointer hover:text-yellow-400">Listing</li>
-        <li className="cursor-pointer hover:text-yellow-400">Tenants</li>
-        <Link to="/client/dashboard">
-        <li className="cursor-pointer hover:text-yellow-400">Dashboard</li>
-        </Link>
-        <li className="cursor-pointer hover:text-yellow-400">Chat</li>
-        <li className="cursor-pointer hover:text-yellow-400">Contact Us</li>
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            {link.path === "#" ? (
+              <span className="cursor-pointer hover:text-yellow-400">{link.name}</span>
+            ) : (
+              <Link to={link.path} className="cursor-pointer hover:text-yellow-400">
+                {link.name}
+              </Link>
+            )}
+          </li>
+        ))}
       </ul>
 
       {/* Right Section - Notification Icon & Profile */}

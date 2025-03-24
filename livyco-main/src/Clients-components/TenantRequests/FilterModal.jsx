@@ -7,7 +7,7 @@ const FilterModal = ({ onClose }) => {
   const [selectedBuilding, setSelectedBuilding] = useState(null);
 
   return (
-    <div className="fixed top-0 right-0 w-80 h-full bg-white shadow-lg p-6 transition-transform duration-300">
+    <div className="fixed top-0 right-0 w-92 h-full bg-white rounded-l-xl shadow-lg p-6 transition-transform duration-300">
       {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">Filter by</h2>
